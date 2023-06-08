@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Use strict</h3>
+    <p>variable means ======= vari (variety of values) + able( ability to hold/store ) ====== ability to store/hold variety of values </p>
+
+    <p>The modern mode, "use strict"</p>
+    <p>The directive looks like a string: "use strict" or 'use strict'. When it is located at the top of a script, the whole script works the “modern” way.</p>
+
+
+<script>
+    "use strict"                
+    
+    //using use strict will not allow assigning a value without using variables.
+    //
+
+     username = "herish"        //this will not work in strict
+    let username = "herish"
+    console.log(username);
+
+    console.log(uname);         // this will not work in strict mode and even without strict mode in let and const.
+    let uname = "parmar"
+    
+
+     // a_username = "Test" //Uncaught ReferenceError: username is not defined
+     let a_username = "Test" //Uncaught ReferenceError: username is not defined
+    console.log(a_username);
+</script>
+</body>
+</html>
