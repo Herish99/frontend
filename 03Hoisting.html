@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hoisting</h1>
+
+    <script>
+        //Fundamental:- variable assigned outside of function can be accessed in function. But variable assigned inside of function cannot be accessed outside of it.
+
+
+
+        var user_var = "user inside var"
+        let user_let = "user inside let"
+        const user_const = "user inside const"
+
+        function response() {
+            var subj_var = "math inside_funct_var"
+            let subj_let = "math inside_funct_let"
+            const subj_const = "math inside_funct_const"
+
+
+            console.log(user_var + " in function");
+            console.log(user_let + " in function");
+            console.log(user_const + " in function");
+
+
+            console.log(subj_var + " in function");
+            console.log(subj_let + " in function");
+            console.log(subj_const + " in function");
+        }
+        response()
+
+
+        console.log(subj_var + "outside of function"); // Uncaught ReferenceError: subj_var is not defined
+        console.log(subj_let + " outside of function");// Uncaught ReferenceError: subj_let is not defined
+        console.log(subj_const + " outside of function");// Uncaught ReferenceError: subj_const is not defined
+    </script>
+</body>
+
+</html>
