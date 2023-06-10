@@ -27,13 +27,31 @@
         // (Condition) ? "True Block Code" : "false Block Code";
 
 
-       test = (user = "herish") ? "yes it is true and inside if block" : "No it is false and inside else block"
+        test = (user = "herish") ? "yes it is true and inside if block" : "No it is false and inside else block"
         console.log(test);
 
 
 
         response = (10 > 12) ? "10 is bigger than 12" : "10 is smaller than 12"
         console.log(response);      //it will show false block code
+
+
+
+        //Nullish coalsching concept
+
+        // In nullish coalescing, a specific operator (such as ??) is used to evaluate an expression and return a default value if the expression is either null or undefined. The key difference from regular null coalescing is that nullish coalescing only considers [null or undefined] values as falsy, whereas other falsy values like an empty string, zero, or false are considered truthy.
+
+        const defaultValue = "Default Value";
+        let value1 = null;
+        let value2 = undefined;
+        let value3 = "Some Value";
+
+        console.log(value1 ?? defaultValue); // Output: "Default Value"
+        console.log(value2 ?? defaultValue); // Output: "Default Value"
+        console.log(value3 ?? defaultValue); // Output: "Some Value"
+
+
+
     </script>
 </body>
 
