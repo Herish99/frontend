@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="custom.js"></script>
+</head>
+<body>
+    <script>
+
+        //Arrow function is shorter version of function.
+        //Arrow function is also called anonymous as it has no name in its syntax. It is saved in variable , and it is the main advantage of it due to its lexical environment and memory allocation.
+        
+        //As it is stored in variable it will occupy memory only when it is called [Lexical Env].   !important.
+        // As we know variable inside function is called local scope, so to access a variable of global scope "this" property is used. 
+
+        function addition(params) {
+            var a = 50;
+            var b = 50
+            return a+b
+        }
+        addition()
+        addition = ()=> 50+50
+        addition = ()=>{
+            var a = 50;
+            var b = 50
+            return a+b
+        }
+    </script>
+</body>
+</html>
