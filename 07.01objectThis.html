@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- <p>As we know inside of object we can have functions too. we know the concept of global and local variable, variable inside of function is called local variable, but to access variable outside of function that are available in object we can use 'this.property'. as shown in below example. </p> -->
+
+
+    <script>
+        let user = {
+            name : "herish",
+            age : 20,
+            gender: "male",
+            hello(){
+                console.log("called", this.name);
+            }
+        }
+        user.hello()
+        
+        
+    </script>
+</body>
+</html>
