@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Destructuring in JavaScript is a feature that allows you to extract values from arrays or objects into
+        individual variables. It provides a concise and convenient syntax for extracting and assigning values.
+
+        There are two main types of destructuring in JavaScript: array destructuring and object destructuring.
+    </p>
+    <p>
+        Array Destructuring:
+        Array destructuring allows you to extract values from an array and assign them to individual variables. Here's
+        an example:
+    </p>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        const [a, b, c, d, e] = numbers;
+
+        console.log(a); // 1
+        console.log(b); // 2
+        console.log(c); // 3
+        console.log(d); // 4
+        console.log(e); // 5
+
+
+        //You can also skip certain elements using commas:
+        const [x, , y] = [10, 20, 30];
+        console.log(x); // 10
+        console.log(y); // 30
+
+
+        //You can use the rest pattern (...) to collect remaining elements into a new array:
+        const [first, ...rest] = [1, 2, 3, 4, 5];
+        console.log(first); // 1
+        console.log(rest); // [2, 3, 4, 5]
+
+        //=======================Array destructuring ends ===============================
+
+
+
+        //======================Object destructuring starts =============================
+
+
+        //Object destructuring allows you to extract values from an object and assign them to variables with the same property names. Here's an example:
+
+        const person = {
+            name: 'John Doe',
+            age: 30,
+            location: 'New York'
+        };
+
+        const { namee, agee, location } = person;
+
+        console.log(namee); // 'John Doe'
+        console.log(agee); // 30
+        console.log(location); // 'New York'
+
+
+        //You can also assign the extracted values to variables with different names using the colon (:) syntax:
+
+
+        const { name: fullName, age } = person;
+
+        console.log(fullName); // 'John Doe'
+        console.log(age); // 30
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
