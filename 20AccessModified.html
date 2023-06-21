@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //class are made because in 1 project there are many developers working on it, due to which data member /functions can conflict with each other. But what if we want to use a data memeber/function of Another developer which is already prepared, that we have learned in tutorial of 'inheritance'. 
+
+        //So now ,we have to make code which is confidical and specific that no other can access to it or use it in their own class or anywhere else. To make it like that we have a syntax like #private is used. Here syntax is '#'. It can be like #anytihng , #herish , #stamp .  
+
+        class AccessModi {
+            #privateExample = "test"
+            DataMember = "test"
+            accessModiSelf(){
+                console.log("Called",this.#privateExample);
+            }
+        }
+        class OtherClass extends AccessModi{
+            accessModiChild(){
+                // console.log("Called",this.DataMember);    // watch diffenece between these with code.
+                console.log("Called",this.#privateExample); //Private field '#privateExample' must be declared in an enclosing class
+            }
+        }
+        let accessObject = new OtherClass;
+        accessObject.accessModiChild()
+    </script>
+</body>
+
+</html>

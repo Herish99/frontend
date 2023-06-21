@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class employees {
+            constructor(designation,name,age,salary) {
+            this.designationclass = designation;
+            this.emplyName = name;
+            this.emplyage = age;
+            this.emplysalary = salary;
+            // console.log("called as constructor");
+            }
+            info(){
+                // console.log("employee name " + this.emplyName);
+                document.write(`<h2>${this.designationclass} class</h2>
+                                Name : ${this.emplyName} <br>
+                                age : ${this.emplyage} <br>
+                                salary : ${this.emplysalary} <br>`)
+            }
+        }
+
+        class manager extends employees {
+            // constructor() {
+            //     //when we use extends property then be sure to use super(), then only will work if using same data function with extends.
+            //     super()
+            //     console.log("called manager");
+            // }
+            info(){
+                super.info()
+                // console.log("manager name " + this.emplyName);
+            }
+        }
+
+        let a = new manager("Manager","herish", 24 , 45000)
+        let b = new employees('Employees',"ramesss" ,20 , 20000)
+        a.info()
+        b.info()
+    </script>
+
+</body>
+
+</html>
