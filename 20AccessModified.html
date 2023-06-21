@@ -24,7 +24,8 @@
         class OtherClass extends AccessModi{
             accessModiChild(){
                 // console.log("Called",this.DataMember);    // watch diffenece between these with code.
-                console.log("Called",this.#privateExample); //Private field '#privateExample' must be declared in an enclosing class
+                console.log("Called",this.#privateExample); //Private field '#privateExample' must be declared in an enclosing class.
+                //private cannot be accessed in another class.
             }
         }
         let accessObject = new OtherClass;
