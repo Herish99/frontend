@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>class is a collection of datamember and member functions only</p>
+    <p>datamember we can access entire the class (variable that have scope of class)</p>
+    <script>
+        class AccessModi {
+            // privateExample = "test"
+            // ParentMethod1(){
+            //     console.log("ParentMethod1 ",this.privateExample);
+            // }
+            // ParentMethod2(){
+            //     console.log("ParentMethod2 ",this.privateExample);
+            // }
+            Author = "Chetan Bhagat"        //data member
+            TwoStates(){                    //Data function
+                let abc = "anthing"
+                console.log("storty of TwoStates  and written by",this.Author);
+            }
+            threeIdiots(){                  //Data function
+                // console.log(this.abc);
+                console.log("storty of threeIdiots and written by",this.Author);
+            }
+        }
+        //REMINDER.... function inside of class cannot be called directly, to access it we have make that class as object using 'new' keyword.
+
+        let accessObject = new AccessModi;          //converted class into object first.  
+        accessObject.TwoStates()
+        accessObject.threeIdiots()
+    </script>
+</body>
+
+</html>
