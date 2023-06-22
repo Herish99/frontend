@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>In JavaScript we can only inherit from a single object. There can be only one [[Prototype]] for an object. And a
+        class may extend only one other class.</p>
+    <script>
+        let sayHiMixin = {
+            sayHi() {
+                console.log("hii", this.name);
+                return "anything"
+            },
+            sayBye() {
+                console.log("bye");
+            }
+        }
+        class User {
+            constructor(name) {
+                this.name = name
+            }
+            // sayHi(){
+            //     console.log("hii",this.name);
+            //     return "anything"
+            // }
+            // sayBye(){
+            //     console.log("bye");
+            // }
+        }
+        // console.log(sayHiMixin);
+        // console.log(sayHiMixin.sayHi);
+        Object.assign(User.prototype, sayHiMixin)
+        console.log(sayHiMixin.sayHi());
+        new User("Dude").sayHi()
+
+
+        //==================== Another Example ======================
+
+
+        // Defining some mixin objects
+
+        const canEat = {                        //object1
+            eat() {
+                console.log('Eating...');
+            }
+        }
+
+        const canPlay = {                       //object2
+            play() {
+                console.log('playing...');
+            }
+        }
+
+        const canSleep = {                      //object3
+            sleep() {
+                console.log('sleeping...');
+            }
+        }
+
+
+
+        //Now creating a class and applying mixin in it.
+
+        class Animal {                          //class
+            //.....
+        }
+
+        // Applying mixin to animal class
+        Object.assign(Animal.prototype, canEat,canPlay)
+
+        const myAnimal = new Animal();              //converting class into object
+        myAnimal.eat();     // Output: Eating...
+        myAnimal.play();    //Output playing...
+
+
+        class cat{
+            //...
+        }
+
+        Object.assign(cat.prototype,canSleep,canEat)
+
+        const myCat = new cat();                    //converting class into object
+        myCat.sleep();
+        myCat.eat();
+
+    </script>
+</body>
+
+</html>
