@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>polymorphism</h2>
+    <p>The polymorphism is a core concept of an object-oriented paradigm that provides a way to perform a single action in different forms. It provides an ability to call the same method on different JavaScript objects.</p>
+    <script>
+        var a = 5
+        a = 15
+        a = 55
+        a = 5
+
+//javascript is the only language that can have 'more than one and same function name' in same class.
+
+//Basically polymorphysim is a concept of 'overriding'. see below example how it overrides and gives responce, and one more thing to know is we can appply the function of parent to its child as shown below.
+
+        class MathOp{
+
+            //overriding the same function name 3 times in same class and all three are getting called instead of last function/method only.
+
+            SumForTwo(){
+                console.log("MathOp SumForTwo without arg");
+            } 
+            SumForTwo(a){
+                console.log("MathOp SumForTwo with arg",a);
+            } 
+            SumForTwo(val1,val2){
+                console.log("MathOp SumForTwo with tow arg",val1,val2);
+            } 
+        }
+        class AdvMathOp extends MathOp{
+            SumForTwo(){
+                //watch the difference with using console & super at same time and by using it one by one.
+                // super.SumForTwo(5552)   //comment=> then uncomment=> then uncomment both above & below
+                console.log("AdvMathOp SumForTwo"); // do it same as above respectively.
+            } 
+        }
+        let Obj = new MathOp
+        let Ob = new AdvMathOp
+
+        Obj.SumForTwo(); // if we called this without any parameter init MathOp SumForTwo
+        Obj.SumForTwo(50); // if we called this without any para init MathOp SumForTwo
+        Obj.SumForTwo(50,100); // if we called this without any para init MathOp SumForTwo
+
+        
+        Ob.SumForTwo(); // if we called this without any para init AdvMathOp SumForTwo
+        Ob.SumForTwo(50); // if we called this without any para init AdvMathOp SumForTwo
+        Ob.SumForTwo(50,100); // if we called this without any para init AdvMathOp SumForTwo
+        
+        //======================== difference of above starts ========================  
+        // 24Polymorphysm.html:32 MathOp SumForTwo with tow arg undefined undefined
+        // 24Polymorphysm.html:32 MathOp SumForTwo with tow arg 50 undefined
+        // 24Polymorphysm.html:32 MathOp SumForTwo with tow arg 50 100
+        
+        // 24Polymorphysm.html:37 AdvMathOp SumForTwo
+        // 24Polymorphysm.html:37 AdvMathOp SumForTwo
+        // 24Polymorphysm.html:37 AdvMathOp SumForTwo
+        //======================== difference of above Ends ========================
+        
+        // dispData = ""
+        // fetch("urlserversidedata")
+        // {
+        //     dispData = "abc"
+        // }
+        // dispData
+    </script>
+
+</body>
+</html>
