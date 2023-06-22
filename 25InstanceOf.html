@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // As we already know 'typeof' is inbuilt method to know what kind of data type is it.
+        
+        // in the same way we have 'instanceof' inbuilt method to know when there are similar type of class and that class are converted into object. To know whether that object is occupied with (same class or not) / which of the following class.
+
+        class Rabbit { }
+        class RabbitNew { }
+        let rabbitObject = new Rabbit();
+         rabbit = new RabbitNew();
+
+        // is it an object of Rabbit class?
+        alert(rabbitObject instanceof Rabbit); // true
+        alert(rabbit instanceof Rabbit); // false
+        alert(typeof "Rabbit"); // string
+    </script>
+</body>
+
+</html>
