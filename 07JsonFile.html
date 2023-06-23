@@ -16,28 +16,57 @@
     <h2>InShort JSON stands for JavaScript object Notation. JSON is a lightweight format for storing and transporting
         data
 
-        JSON is often used when data is sent from a server to a web page 
+        JSON is often used when data is sent from a server to a web page
     </h2>
-    <p>JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.</p>
+    <p>JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on
+        JavaScript object syntax.</p>
     <ol>
         <li>parse(): Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.</li>
         <li>stringify(): Accepts an object as a parameter, and returns the equivalent JSON string.</li>
     </ol>
 
-<script>
-    
-    //Thses are two properties to be used in json file formate.
+    <p>
+        The full syntax of JSON.stringify is:
 
-    //whenever we are getting a json file , it will be in string formate because string cannot be break or [it is unbreakable] wile if they are in array or object formate there are possibility that they can break while transfering / sharing. 
+    <p>let json = JSON.stringify(value[, replacer, space])</p>
+    <hr>
+    value:-
+    A value to encode.
+    <hr>
+    replacer:-
+    Array of properties to encode or a mapping function function(key, value).
+    <hr>
+    space:-
+    Amount of space to use for formatting
+    <hr>
+
+    </p>
+
+    <script>
+
+        //Thses are two properties to be used in json file formate.
+
+        //whenever we are getting a json file , it will be in string formate because string cannot be break or [it is unbreakable] wile if they are in array or object formate there are possibility that they can break while transfering / sharing. 
 
 
-    let fruits = {"mango" : 5 , "orange" : 4 , "banana" : "12" , "watermelon " : 1}
-    // fruits.mango = 10           // using key , value has been changed.
-    console.log(fruits);
+        let fruits = { "mango": 5, "orange": 4, "banana": "12", "watermelon ": 1 }
+        // fruits.mango = 10           // using key , value has been changed.
+        console.log(fruits);
 
-    // JSON.stringyfy()  //  conversion of data-type[object] to string
-    // JSON.parse()      //  conversion of string to data-type[object]
-</script>
+        // JSON.stringyfy()  //  conversion of data-type[object] to string
+        // JSON.parse()      //  conversion of string to data-type[object]
+
+
+        let ObjToString = JSON.stringify(fruits)           //converted to string
+        console.log(ObjToString);
+        console.log(typeof ObjToString);
+
+
+        let stringToObj = JSON.parse(ObjToString)            //converted to object
+        console.log(stringToObj);
+        console.log(typeof stringToObj);
+
+    </script>
 
 </body>
 
