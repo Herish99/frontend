@@ -101,10 +101,14 @@
         ]);
 
         console.log(recipeMap.keys());
+        console.log(recipeMap.keys());
         console.log(recipeMap.values());
         // iterate over keys (vegetables)
         for (let vegetable of recipeMap.keys()) {
             console.log(vegetable); // cucumber, tomatoes, onion
+        }
+        for (let vegetable of recipeMap.values()) {
+            console.log(vegetable); // 500,350,50
         }
 
 
@@ -114,7 +118,7 @@
         map1.set('b', 2);
         map1.set('c', 3);
 
-        console.log(map1.get('a'));
+        console.log(map1.get('a'));         //using get(), we write a key and in return we get value.
         // Expected output: 1
 
         map1.set('a', 97);
