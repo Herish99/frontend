@@ -23,10 +23,11 @@
             ['onion', 50]
         ]);
         console.log(recipeMap);
-        console.log(Object.entries(recipeMap));
+        console.log(Object.entries(recipeMap)); //output Array
         Object.entries(recipeMap).map((data) => {
             console.log(data);
         })
+        
         recipeMap.forEach((value, key, map) => {
             //   console.log(map.entries());
             console.log(`${key}: ${value}`); // cucumber: 500 etc

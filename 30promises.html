@@ -22,7 +22,7 @@
         <li><em>rejected</em>: meaning that the operation failed.</li>
     </ul>
     <script>
-        myPromise = new Promise((resolve,rejected)=>{
+        myPromise = new Promise((resolve, rejected) => {
             let marks = 70
             if (marks > 50) {
                 setTimeout(() => {
@@ -35,13 +35,48 @@
             }
         })
         console.log(myPromise);
-        myPromise.then((res)=>{
+        myPromise.then((res) => {
             console.log(res);
-        }).catch((res)=>{
+        }).catch((res) => {
             console.log(res);
         })
 
         // fetch("serverURL").then("json conversion").then("server res")
+
+        // ================================================================================================//
+
+        // Imagine you've ordered a package online, and the website promises to deliver it to your doorstep. The promise consists of three possible states:
+        //Pending: The package is on its way.
+        // Fulfilled: The package has arrived at your doorstep.
+        // Rejected: There's a problem, and the package couldn't be delivered.
+
+        // Simulating an asynchronous operation with a promise
+        function orderPackage() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const isDelivered = Math.random() < 0.8; // Simulating successful delivery probability
+
+                    if (isDelivered) {
+                        resolve('Package delivered!');
+                    } else {
+                        reject('Package couldn\'t be delivered.');
+                    }
+                }, 2000); // Simulating a 2-second delivery time
+            });
+        }
+
+        // Placing an order (initiating the asynchronous operation)
+        const packagePromise = orderPackage();
+
+        // Handling the promise's states
+        packagePromise.then((result) => {
+            console.log(result); // Fulfilled: Package delivered!
+        }).catch((error) => {
+            console.log(error); // Rejected: Package couldn't be delivered.
+        });
+
+        console.log('Order placed. Waiting for package...');
+
     </script>
 </body>
 
