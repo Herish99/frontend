@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Async & await</h1>
+
+    <h3>
+        Certainly! async and await are modern features in JavaScript that make working with asynchronous code more
+        readable and organized, especially when dealing with Promises. These keywords provide a more synchronous-like
+        style to handle asynchronous operations. Let's break it down with a simple example:
+    </h3>
+
+    <h4>
+        Imagine you're at a food truck, and you want to order a sandwich. Instead of standing in line and waiting for
+        your turn, you take a numbered ticket and wait until your number is called. When your number is called, you can
+        go directly to the counter to get your sandwich.
+    </h4>
+
+
+
+    <h3>
+        In this analogy:
+    </h3>
+
+    <h4>
+        <li>
+            Taking a Numbered Ticket (Async): You initiate the order (asynchronous operation) and are given a numbered
+            ticket (Promise) that represents the future result.
+        </li>
+        <li>
+            Waiting for Your Number (Await): You use the await keyword to wait for your number (Promise) to be called.
+            This allows you to pause your actions without blocking other people's orders.
+        </li>
+        <li>
+            Getting Your Sandwich (Result): When your number is called and your sandwich is ready (Promise is
+            fulfilled), you directly go to the counter to get your sandwich (get the resolved value).
+
+        </li>
+    </h4>
+
+
+
+
+    <script>
+        // Simulating an asynchronous operation with a Promise
+        function makeSandwich(type) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const sandwich = `${type} sandwich`;
+                    resolve(sandwich);
+                }, 2000); // Simulating a 2-second sandwich-making time
+            });
+        }
+
+        // Using the async/await pattern
+        async function orderSandwich() {
+            try {
+                console.log('Order placed. Taking a numbered ticket...');
+                const sandwich = await makeSandwich('Buttered');
+                console.log(`Received: ${sandwich}. Enjoy your meal!`);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Placing an order (initiating the asynchronous operation)
+        orderSandwich();
+
+        console.log('Waiting for sandwich...');
+
+    </script>
+</body>
+
+</html>

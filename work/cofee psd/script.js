@@ -17,3 +17,9 @@ window.onscroll = ()=>{
         }
     })
 }
+
+let navbar = document.getElementById("navbarr");
+function menu(){
+    console.log("hello")
+    navbar.classList.toggle("active")
+}

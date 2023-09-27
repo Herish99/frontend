@@ -14,7 +14,7 @@
     <section class="po-rel sec-bg1 padd-bottom">
         <div class="container">
             <header>
-                <div class="nav row jcs">
+                <div class="navbarr row jcs" id="navbarr">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -26,18 +26,41 @@
                     <img class="nav-logo" src="./images/Logo.png" alt="">
                 </div>
             </header>
+
+            <div class="hambrg" >
+
+                <input id="toggle" type="checkbox"></input>
+                
+                <label for="toggle" class="hamburger" onclick="menu()">
+                    <div class="top-bun"></div>
+                    <div class="meat"></div>
+                    <div class="bottom-bun"></div>
+                </label>
+            </div>
+
+            <div class="nav">
+                <div class="nav-wrapper">
+                    <nav>
+                        <a href="#">HOME</a><br>
+                        <a href="#">ABOUT</a><br>
+                        <a href="#">WORK</a><br>
+                        <a href="#">SERVICES</a>
+                    </nav>
+                </div>
+            </div>
         </div>
+
         <div class="container row">
             <div class="animate sec1-left col-50">
 
-                <h1 >Coffee Time</h1>
+                <h1>Coffee Time</h1>
                 <h3>YOUR HEADLINE</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo cupiditate iste eum, amet odit eligendi unde assumenda natus accusamus tempora voluptatem minus suscipit debitis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo cupiditate iste eum, amet
+                    odit eligendi unde assumenda natus accusamus tempora voluptatem minus suscipit debitis!</p>
                 <button>Order now</button>
 
             </div>
             <div class="sec1-right col-50">
-
                 <div class="r-img"><img src="./images/sec1-img.png" alt=""></div>
             </div>
         </div>
@@ -48,7 +71,7 @@
     <section class="sec-bg2 padd-bottom po-rel show-animate">
         <div class="container row po-rel">
             <div class="sec2-left col-50">
-                
+
                 <h1 class="animate">Black Coffees</h1>
                 <button>Order Now</button>
 
@@ -56,8 +79,8 @@
             <div class="sec2-right col-50">
                 <img src="./images/Image.png" alt="">
                 <p class="animate">Lorem ipsum dolor sit amet, consectetur adipis
-                    cing elit, sed do eiusmod tempor incididunt ut 
-                    labore et dolore magna aliqua. Ut enim ad 
+                    cing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad
                     minim veniam, quis nostrud exercitation </p>
             </div>
         </div>
@@ -70,13 +93,15 @@
             <div class="sec3-left col-50">
                 <img src="./images/sec3-img.png" alt="">
                 <p class="animate">Lorem ipsum dolor sit amet, consectetur adipis
-                    cing elit, sed do eiusmod tempor incididunt ut 
-                    labore et dolore magna aliqua. Ut enim ad 
+                    cing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad
                     minim veniam, quis nostrud exercitation </p>
             </div>
             <div class="sec3-right col-50">
                 <h1 class="animate">Hot Coffees</h1>
-                <button>Order Now</button>
+                <div class="btn">
+                    <button >Order Now</button>
+                </div>
             </div>
         </div>
     </section>
@@ -85,7 +110,7 @@
     <section class="sec-bg1 padd-bottom po-rel">
         <div class="container row po-rel">
             <div class="sec2-left col-50">
-                
+
                 <h1 class="animate">White Coffees</h1>
                 <button>Order Now</button>
 
@@ -93,8 +118,8 @@
             <div class="sec2-right col-50">
                 <img src="./images/sec4-img.png" alt="">
                 <p class="animate">Lorem ipsum dolor sit amet, consectetur adipis
-                    cing elit, sed do eiusmod tempor incididunt ut 
-                    labore et dolore magna aliqua. Ut enim ad 
+                    cing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad
                     minim veniam, quis nostrud exercitation </p>
             </div>
         </div>
@@ -102,8 +127,8 @@
 
 
     <section class="sec-bg1 padd-bottom">
-        <div class="container sec5">
-            <h1 class="animate">Voucher</h1>
+        <div class="container sec5 ">
+            <h1 class="animate ">Voucher</h1>
             <div class="r-img"><img src="./images/sec5-voucher.png" alt=""></div>
             <button>Get Voucher Now</button>
         </div>
@@ -112,28 +137,30 @@
 
     <section class="sec-bg1 po-rel padd-bottom">
         <div class="container sec6 po-rel padd-bottom">
-            <h1>Customer Review</h1>
+            <h1 class="col-100">Customer Review</h1>
             <div class="inside-box row jcs po-rel">
-            <div class="left col-50 right-animate">
-                <div><img src="./images/sec6-img1.png" alt=""></div>
-                <h3>John Peter</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quos culpa incidunt blanditiis consequuntur quam, quisquam minima itaque commodi et.</p>
+                <div class="left col-50 right-animate">
+                    <div><img src="./images/sec6-img1.png" alt=""></div>
+                    <h3>John Peter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quos culpa incidunt blanditiis
+                        consequuntur quam, quisquam minima itaque commodi et.</p>
+                </div>
+                <div class="right col-50 left-animate">
+                    <div><img src="./images/sec6-img2.png" alt="" class="po-rel"></div>
+
+                    <!-- <img src="./images/sec2-blank.png" alt="" class="po-ab blank-img"> -->
+                    <h3>Ella Thomson</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur quas quibusdam
+                        nulla veritatis illum corrupti dolores fugit delectus nostrum.</p>
+                </div>
             </div>
-            <div class="right col-50 left-animate">
-                <div><img src="./images/sec6-img2.png" alt="" class="po-rel"></div>
-                
-                <!-- <img src="./images/sec2-blank.png" alt="" class="po-ab blank-img"> -->
-                <h3>Ella Thomson</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur quas quibusdam nulla veritatis illum corrupti dolores fugit delectus nostrum.</p>
-            </div>
-        </div>
         </div>
         <img src="./images/sec6-bottom-design.png" alt="" class="po-ab sec6-bot-shape">
     </section>
 
 
     <section class="sec-bg2 po-rel padd-bottom">
-        <div class="container sec7 po-rel">
+        <div class="container sec7 po-rel col-100">
             <h1 class="right-animate">We are open</h1>
             <div class="date left-animate">
                 <h3>Monday-Friday</h3>
@@ -150,22 +177,25 @@
 
     <section class="sec-bg1 po-rel padd-bottom">
         <div class="container po-rel sec-8">
-            <h1 class="po-rel">Our Branches</h1>
+            <h1 class="po-rel col-100">Our Branches</h1>
             <div class="inside-box row jcs">
                 <div class="col30 left-animate ">
                     <img src="./images/sec8-img1.png" alt="">
                     <h2>New-York</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus perspiciatis officia sed est dignissimos dolorem ducimus facilis eligendi. Harum, neque.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus perspiciatis officia sed est
+                        dignissimos dolorem ducimus facilis eligendi. Harum, neque.</p>
                 </div>
                 <div class="col30 left-animate">
                     <img src="./images/sec8-img2.png" alt="">
                     <h2>Jakarta</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus perspiciatis officia sed est dignissimos dolorem ducimus facilis eligendi. Harum, neque.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus perspiciatis officia sed est
+                        dignissimos dolorem ducimus facilis eligendi. Harum, neque.</p>
                 </div>
                 <div class="col30 po-rel left-animate">
                     <img src="./images/sec8-img3.png" alt="">
                     <h2>Paris</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus perspiciatis officia sed est dignissimos dolorem ducimus facilis eligendi. Harum, neque.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus perspiciatis officia sed est
+                        dignissimos dolorem ducimus facilis eligendi. Harum, neque.</p>
                 </div>
             </div>
         </div>
